@@ -1,4 +1,3 @@
-# /ssh:mprotter@cedar.computecanada.ca:/BCS_PH/SCdefs.jl 
 module SCdefs
 
 ϵ(k::Number) = @fastmath -2cos(k)
