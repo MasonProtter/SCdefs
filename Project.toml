@@ -1,0 +1,6 @@
+authors = ["MasonProtter <mason.protter@gmail.com>"]
+name = "SCdefs"
+uuid = "9184f2f0-bab9-11e8-1723-67569dec8591"
+version = "0.1.0"
+
+[deps]
