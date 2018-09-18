@@ -69,6 +69,7 @@ generate_ks(N::Int) = generate_ks(Float64(N))
 generate_ms(mmax, target::Symbol) = generate_ms(mmax, Val{target}()) 
 generate_ms(mmax, ::Val{:CPU}) = -mmax:mmax
 
-export ∑, ϵ, ξ, E, Esq, βE, βξ, f, b, G₀, G, F, F̄, iω, iΩ, generate_ks
+
+export ∑, ϵ, ξ, E, Esq, βE, βξ, f, b, G₀, G, F, F̄, iω, iΩ, generate_ks, generate_ms
 
 end
