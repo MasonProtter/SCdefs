@@ -56,18 +56,12 @@ function generate_ks(N::Float64)
 end
 
 
-function generate_ks(N::Float64, target=:CPU)
-    nmax = (N-1.0)/2.0
-    kmax = 2.0*π*nmax/N
-    kstep = 2*π/N
-    iter = -kmax:kstep:kmax
-    if target == :CPU
-        iter
-    elseif target == :GPU
-        CuArray(iter)
-    else
-        throw("Unrecognized targe. use iether :CPU or :GPU.")
-    end
+function generate_ks(N::Float64, target::Symbol)
+    generate_ks(N, Val{target}())
+end
+
+function generate_ks(N::Float64, target::Val{:CPU})
+    generate_ks(N)
 end
 
 generate_ks(N::Int) = generate_ks(Float64(N))
